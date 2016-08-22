@@ -1,0 +1,24 @@
+<div class="col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-body" id="player_card">
+
+      <%= image_tag(player.photo) %>
+
+      <table class="table"> 
+        <thead> 
+          <tr> 
+            <th><%= player.name %></th>
+            <th><%= player.rating %></th>
+          </tr> 
+          <tr> 
+            <th><%= goalie(player) %></th>
+            <th><%= player.nationality %></th>
+          </tr>
+        </thead>
+      </table>
+        <%= link_to 'Show', player %>
+        <%= link_to 'Edit', edit_player_path(player) %>
+        <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+</div>

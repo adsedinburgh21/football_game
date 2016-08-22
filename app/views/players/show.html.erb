@@ -1,24 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  
 
-<p>
-  <strong>Name:</strong>
-  <%= @player.name %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @player.rating %>
-</p>
+    <%= render partial: 'card', locals: { :player => @player } %>
 
-<p>
-  <strong>Outfield:</strong>
-  <%= @player.outfield %>
-</p>
+    <%= link_to 'Edit', edit_player_path(@player) %> |
+    <%= link_to 'Back', players_path %>
 
-<p>
-  <strong>Nationality:</strong>
-  <%= @player.nationality %>
-</p>
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+  </div>
+</div>
